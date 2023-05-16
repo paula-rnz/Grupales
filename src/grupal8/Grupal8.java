@@ -27,7 +27,9 @@ public class Grupal8 {
 			tipo = entrada.next();
 			evaluacionTipo = tipo.toLowerCase();
 			
-		}while((!tipo.equals("cliente"))|| (!tipo.equals("profesional"))||(!tipo.equals("administrativo")));
+			registrarUsuario();
+			
+		}while((!evaluacionTipo.equals("cliente"))|| (!evaluacionTipo.equals("profesional"))||(!evaluacionTipo.equals("administrativo")));
 		
 		switch (evaluacionTipo) {
 		case "cliente": {
@@ -82,6 +84,7 @@ public class Grupal8 {
 		
 		System.out.print("Ingrese nombre del usuario: ");
 		nombre = entrada.next();
+		nombre += entrada.nextLine();
 		System.out.println("\nnombre usuario "+nombre+" registrado");
 		
 		System.out.print("Ingrese fecha de naciemiento del usuario: ");

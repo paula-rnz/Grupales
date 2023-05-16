@@ -67,7 +67,8 @@ public class Grupal10 {
         	
 	        do {
 		        System.out.println("\nIngrese Nombre del Alumno:");
-		        nombreAsistentes = sc.nextLine();
+		        nombreAsistentes = sc.next();
+		        nombreAsistentes += sc.nextLine();
 	        }while (nombreAsistentes.isEmpty());
 	        alumnos [i][0] = nombreAsistentes;
         

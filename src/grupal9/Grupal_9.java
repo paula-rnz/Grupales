@@ -5,7 +5,7 @@ import java.util.Scanner;
 
 
 
-public class Grupal9 {
+public class Grupal_9 {
 	
 	    
 	    public static void main(String[] args) {
@@ -101,7 +101,8 @@ public class Grupal9 {
 	        	
 		        do {
 			        System.out.println("\nIngrese Nombre del Asistente:");
-			        nombreAsistentes = sc.nextLine();
+			        nombreAsistentes = sc.next();
+			        nombreAsistentes += sc.nextLine();
 		        }while (nombreAsistentes.isEmpty());
 		        capacitaciones.add("Nombre Asistente: "+ nombreAsistentes);
 	        
