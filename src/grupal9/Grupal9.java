@@ -5,7 +5,7 @@ import java.util.Scanner;
 
 
 
-public class Grupal_9 {
+public class Grupal9 {
 	
 	    
 	    public static void main(String[] args) {

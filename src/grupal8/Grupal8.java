@@ -26,10 +26,11 @@ public class Grupal8 {
 			System.out.print("Ingrese el tipo de usuario para completar los datos, las opciones son Cliente, Profesional, Administrativo: ");
 			tipo = entrada.next();
 			evaluacionTipo = tipo.toLowerCase();
-			
-			registrarUsuario();
-			
+		
 		}while((!evaluacionTipo.equals("cliente"))|| (!evaluacionTipo.equals("profesional"))||(!evaluacionTipo.equals("administrativo")));
+
+		
+		registrarUsuario();
 		
 		switch (evaluacionTipo) {
 		case "cliente": {

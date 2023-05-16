@@ -1,6 +1,7 @@
-package grupal13;
+package grupal15;
 
 import java.time.LocalDate;
+import java.time.Period;
 
 public class Usuario {
 
@@ -39,11 +40,16 @@ public class Usuario {
         this.run = run;
     }
     
+    public String mostrarEdad() {
+    	Period edad = Period.between(fechaNacimiento, LocalDate.now());
+    	return "El usuario tiene "+ edad.getYears() + " años";
+    }
+    
     public String toString() {
         return "Usuario{" +
-                "nombre='" + nombre + '\'' +
-                ", fechaNacimiento=" + fechaNacimiento +
-                ", run='" + run + '\'' +
+                "nombre ='" + nombre + '\'' +
+                ", fechaNacimiento =" + fechaNacimiento +
+                ", run ='" + run + '\'' +
                 '}';
     }
 }

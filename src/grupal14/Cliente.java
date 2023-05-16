@@ -1,4 +1,4 @@
-package grupal13;
+package grupal14;
 
 public class Cliente {
     private int rut;
@@ -101,11 +101,24 @@ public class Cliente {
         this.edad = edad;
     }
     
+    public String obtenerNombre() {
+        return nombres + " " + apellidos;
+    }
     
+    public String obtenerSistemaSalud() {
+        switch (sistemaSalud) {
+            case 1:
+                return "Fonasa";
+            case 2:
+                return "Isapre";
+            default:
+                return "Desconocido";
+        }
+    }
     @Override
     public String toString() {
-        return "Cliente [rut= " + rut + ", nombres= " + nombres + ", apellidos= " + apellidos + ", telefono= " + telefono
-                + ", afp= " + afp + ", sistemaSalud= " + sistemaSalud + ", direccion= " + direccion + ", comuna= " + comuna
-                + ", edad= " + edad + "]";
+        return "Cliente [rut= " + rut + ", nombres = " + nombres + ", apellidos = " + apellidos + ", telefono = " + telefono
+                + ", afp = " + afp + ", sistemaSalud = " + sistemaSalud + ", direccion = " + direccion + ", comuna = " + comuna
+                + ", edad = " + edad + "]";
     }
 }
