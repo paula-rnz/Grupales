@@ -4,7 +4,7 @@ public class Cliente {
     private int rut;
     private String nombres;
     private String apellidos;
-    private String telefono;
+    private int telefono;
     private String afp;
     private int sistemaSalud;
     private String direccion;
@@ -15,7 +15,7 @@ public class Cliente {
         // constructor vacío
     }
     
-    public Cliente(int rut, String nombres, String apellidos, String telefono, String afp, int sistemaSalud,
+    public Cliente(int rut, String nombres, String apellidos, int telefono, String afp, int sistemaSalud,
                    String direccion, String comuna, int edad) {
         this.rut = rut;
         this.nombres = nombres;

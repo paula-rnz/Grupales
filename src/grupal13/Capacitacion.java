@@ -5,14 +5,14 @@ import java.time.LocalTime;
 
 public class Capacitacion {
     private int identificador;
-    private String rutCliente;
+    private int rutCliente;
     private LocalDate dia;
     private LocalTime hora;
     private String lugar;
     private int duracion;
     private int cantidadAsistentes;
 
-    public Capacitacion(int identificador, String rutCliente, LocalDate dia, LocalTime hora, String lugar, int duracion, int cantidadAsistentes) {
+    public Capacitacion(int identificador, int rutCliente, LocalDate dia, LocalTime hora, String lugar, int duracion, int cantidadAsistentes) {
         this.identificador = identificador;
         this.rutCliente = rutCliente;
         this.dia = dia;

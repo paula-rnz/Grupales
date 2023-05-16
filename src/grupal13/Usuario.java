@@ -6,9 +6,9 @@ public class Usuario {
 
 	private String nombre;
     private LocalDate fechaNacimiento;
-    private String run;
+    private int run;
 
-    public Usuario(String nombre, LocalDate fechaNacimiento, String run) {
+    public Usuario(String nombre, LocalDate fechaNacimiento, int run) {
         this.nombre = nombre;
         this.fechaNacimiento = fechaNacimiento;
         this.run = run;
