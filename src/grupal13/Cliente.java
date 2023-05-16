@@ -1,4 +1,4 @@
-package Grupal_13;
+package grupal13;
 
 public class Cliente {
     private int rut;

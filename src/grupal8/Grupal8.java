@@ -1,8 +1,8 @@
-package grupales;
+package grupal8;
 
 import java.util.Scanner;
 
-public class Grupal_8 {
+public class Grupal8 {
 
 
 	public static void main(String[] args) {

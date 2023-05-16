@@ -1,9 +1,9 @@
-package grupales;
+package grupal10;
 
 import java.util.ArrayList;
 import java.util.Scanner;
 
-public class Grupal_10 {
+public class Grupal10 {
 
 
     public static void main(String[] args) {
