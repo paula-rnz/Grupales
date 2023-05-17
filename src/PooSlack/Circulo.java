@@ -6,7 +6,7 @@ public class Circulo {
 	 * Incluye un constructor para inicializar el radio y métodos para calcular el área y la circunferencia del círculo.
 	 */
 	
-	Double radio;
+	private Double radio;
 	
 	public Circulo(Double radio) {
 		this.radio = radio;		

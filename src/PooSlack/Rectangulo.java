@@ -5,8 +5,8 @@ public class Rectangulo {
 	/*Crea una clase "Rectangulo" con los atributos longitud y ancho. 
 	  Incluye un constructor para inicializar los atributos y métodos para calcular el área y el perímetro del rectángulo.*/
 
-	int longitud;
-	int ancho;
+	private int longitud;
+	private int ancho;
 	
 	public Rectangulo(int longitud,int ancho) {
 		this.longitud =longitud;

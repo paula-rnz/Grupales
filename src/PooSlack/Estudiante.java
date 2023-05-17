@@ -7,9 +7,9 @@ package PooSlack;
 
 public class Estudiante {
 	
-	String nombre;
-	int edad;
-	int numeroEstudiante;
+	private String nombre;
+	private int edad;
+	private int numeroEstudiante;
 	
 	public Estudiante(String nombre, int edad, int numeroEstudiante) {
 		this.nombre = nombre;

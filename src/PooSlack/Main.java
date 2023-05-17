@@ -1,6 +1,7 @@
 package PooSlack;
 
-import java.util.Scanner;
+import java.time.LocalDate;
+import java.time.Month;
 
 public class Main {
 
@@ -10,78 +11,46 @@ public class Main {
 	
 	public static void main(String[] args) {
 		
-			
-		Scanner entrada = new Scanner(System.in);
-		
-		String evaluacionTipo,nombre;
-		int edad, numeroEstudiante;
-		
-		do {
-			System.out.print("Ingrese la Clase con la que quiera trabajar, "
-					+ "las opciones son Estudiante, circulo, Libro, Rectangulo: ");
-			String tipo = entrada.next();
-			evaluacionTipo = tipo.toLowerCase();
-					
-		}while((!evaluacionTipo.equals("circulo"))||(!evaluacionTipo.equals("estudiante"))
-				||(!evaluacionTipo.equals("libro")||(!evaluacionTipo.equals("rectangulo"))));
-		
-		switch (evaluacionTipo) {
-			case "estudiante": {
-				
-				for (int i=1; i<=2 ; i++) {
-			   		 do {
-			   			 System.out.println("Ingrese Nombre del Estudiante:");
-			   			nombre = entrada.nextLine();
-			   		 }while (nombre.isEmpty());	
-			   		 
-			   		 do {
-			   			 System.out.println("Ingrese edad del Estudiante:");
-			   			 edad = entrada.nextInt();
-			   		 }while (edad<0);	
-			   		 
-			   		 do {
-			   			 System.out.println("Ingrese numero del Estudiante:");
-			   			numeroEstudiante = entrada.nextInt();
-			   		 }while (numeroEstudiante<0);
-			   		 
-			   		Estudiante estudiante = new Estudiante(nombre, edad,numeroEstudiante);
-			
-			        System.out.println("Nombre Estudiante: "+ estudiante.getNombre());
-			        System.out.println("Edad Estudiante: "+ estudiante.getEdad());
-			        System.out.println("Numero Estudiante: "+ estudiante.getNumeroEstudiante());
-				}				
-						
-			break;
-			}
-					case "circulo": {
-						
-				System.out.print("Ingrese radio: ");
-				Double radio = entrada.nextDouble();
-				
-				Circulo circulo = new Circulo(radio);
-				
-				System.out.println("El Area del circulo es: "+ circulo.obtenerArea());
-				System.out.println("El Perimetro del circulo es: "+ circulo.obtenerPerimetro());
-				
+		//Estudiantes
+		Estudiante estudiante1 = new Estudiante("Juan Pérez", 20, 12345);
+		Estudiante estudiante2 = new Estudiante("María López", 19, 54321);
 
-						
-				break;
-			}
-			case "rectangulo": {
-					
-				System.out.print("Ingrese ancho: ");
-				int ancho = entrada.nextInt();
-				System.out.print("Ingrese longitud: ");
-				int longitud = entrada.nextInt();
-				
-				Rectangulo rectangulo = new Rectangulo(longitud,ancho);
-				System.out.println("El Area del rectangulo es: "+ rectangulo.obtenerArea());
-				System.out.println("El Perimetro del rectangulo es: "+ rectangulo.obtenerPerimetro());
-				
-						
-				break;
-			}
-			
-	   }
+		System.out.println(estudiante1.toString());
+		System.out.println(estudiante2.toString());
+		
+		
+		
+		//Libros
+		Libro libro1 = new Libro("El señor de los anillos", "J.R.R. Tolkien", LocalDate.of(1954, Month.JULY, 29));
+		Libro libro2 = new Libro("Cien años de soledad", "Gabriel García Márquez", LocalDate.of(1967, Month.JUNE, 5));
+
+		System.out.println(libro1.toString());
+		System.out.println(libro2.toString());
+		
+		
+		
+		// Circulo
+		Circulo circulo1 = new Circulo(5.0);
+		Circulo circulo2 = new Circulo(7.0);
+		
+		System.out.println("El area del circulo 1 es: "+circulo1.obtenerArea());
+		System.out.println("El area del circulo 2 es: "+circulo2.obtenerArea());
+		System.out.println("");		
+		System.out.println("El Perimetro del circulo 1 es: "+circulo1.obtenerPerimetro());
+		System.out.println("El Perimetro del circulo 2 es: "+circulo2.obtenerPerimetro());
+		
+		
+		
+		// Rectangulo
+		Rectangulo rectangulo1 = new Rectangulo(5,7);
+		Rectangulo rectangulo2 = new Rectangulo(8,9);
+		
+		System.out.println("El area del rectangulo 1 es: "+rectangulo1.obtenerArea());
+		System.out.println("El area del rectangulo 2 es: "+rectangulo2.obtenerArea());
+		System.out.println("");		
+		System.out.println("El Perimetro del rectangulo 1 es: "+rectangulo1.obtenerPerimetro());
+		System.out.println("El Perimetro del rectangulo 2 es: "+rectangulo2.obtenerPerimetro());
+		
+		
 	}
 }

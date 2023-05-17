@@ -1,6 +1,6 @@
 package PooSlack;
 
-import java.util.Date;
+import java.time.LocalDate;
 
 public class Libro {
 	
@@ -8,11 +8,11 @@ public class Libro {
 	 * Incluye un constructor para inicializar los atributos y métodos para obtener y establecer los valores de los atributos.
 	 */
 
-	String titulo;
-	String autor;
-	Date anio;
+	private String titulo;
+	private String autor;
+	private LocalDate anio;
 	
-	public Libro(String titulo, String autor, Date anio) {
+	public Libro(String titulo, String autor, LocalDate anio) {
 		this.titulo = titulo;
 		this.autor = autor;
 		this.anio = anio;		
@@ -35,11 +35,11 @@ public class Libro {
 		return autor;
 	}
 	
-	public void setAnio(Date anio) {
+	public void setAnio(LocalDate anio) {
 		this.anio = anio;
 	}
 	
-	public Date getAnio() {
+	public LocalDate getAnio() {
 		return anio;
 	}
 
