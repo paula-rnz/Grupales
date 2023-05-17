@@ -20,11 +20,11 @@ public class Circulo {
 		return radio;
 	}
 	
-	public Double getArea() {
+	public Double obtenerArea() {
 		return (radio*radio*Math.PI);
 	}
 	
-	public Double getPerimetro() {
+	public Double obtenerPerimetro() {
 		return (2*radio*Math.PI);
 	}
 

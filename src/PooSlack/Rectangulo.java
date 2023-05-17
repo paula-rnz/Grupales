@@ -29,11 +29,11 @@ public class Rectangulo {
 		return ancho;
 	}
 	
-	public int getArea() {
+	public int obtenerArea() {
 		return (longitud*ancho);
 	}
 	
-	public int getPerimetro() {
+	public int obtenerPerimetro() {
 		return (2*ancho +2*longitud);
 	}
 	
