@@ -22,47 +22,63 @@ public class Grupal8 {
 		String evaluacionTipo;
 	
 		Scanner entrada = new Scanner(System.in);
-		do {
-			System.out.print("Ingrese el tipo de usuario para completar los datos, las opciones son Cliente, Profesional, Administrativo: ");
-			tipo = entrada.next();
-			evaluacionTipo = tipo.toLowerCase();
+		System.out.print("Ingrese el tipo de usuario para completar los datos, las opciones son Cliente, Profesional, Administrativo: ");
+		tipo = entrada.next();
+		evaluacionTipo = tipo.toLowerCase();
+				
 		
-		}while((!evaluacionTipo.equals("cliente"))|| (!evaluacionTipo.equals("profesional"))||(!evaluacionTipo.equals("administrativo")));
-
-		
-		registrarUsuario();
 		
 		switch (evaluacionTipo) {
 		case "cliente": {
 			
-			System.out.print("Ingrese direccion del Cliente: ");
+			String datosUsuarios= registrarUsuario();
+			
+			System.out.println("Ingrese direccion del Cliente: ");
 			direccion = entrada.next();
-			System.out.print("Igrese telefono del Cliente: ");
+			System.out.println("Ingrese telefono del Cliente: ");
 			telefono = entrada.next();
-			System.out.print("Ingrese cantidad de empleados: ");
+			System.out.println("Ingrese cantidad de empleados: ");
 			cantidadEmpleados = entrada.nextInt();
 			entrada.close();
+			
+			System.out.println("\nLos datos del Cliente son: \n");
+			System.out.println(datosUsuarios);
+			System.out.println("Direccion: " + direccion + "\nTelefono:  " + telefono + "\nCantidadEmpleados: " + cantidadEmpleados );
 			
 			break;
 		}
 		case "profesional": {
 			
-			System.out.print("Ingrese direccion del Profesional: ");
+			String datosUsuarios= registrarUsuario();
+			
+			System.out.println("Ingrese direccion del Profesional: ");
 			direccion = entrada.next();
-			System.out.print("Ingrese años de experiencia Profesional: ");
+			System.out.println("Ingrese años de experiencia Profesional: ");
 			anioExperiencia = entrada.nextInt();
-			System.out.print("Ingrese departamento del Profesional: ");
+			System.out.println("Ingrese departamento del Profesional: ");
 			departamento = entrada.next();
+			
+			System.out.println("\nLos datos del Profesional son: \n");
+			System.out.println(datosUsuarios);
+			System.out.println("Direccion: " + direccion + "\nAños Experiencia:  " + anioExperiencia + "\nDepartamento: " + departamento );
+
 			
 			break;
 		}
 		case "administrativo": {
 			
-			System.out.print("Ingrese funcion del Administrativo: ");
+			String datosUsuarios= registrarUsuario();
+			
+			System.out.println("Ingrese funcion del Administrativo: ");
 			funcion = entrada.next();
 			
-			System.out.print("Ingrese nombre del Superior del Administrativo: ");
+			System.out.println("Ingrese nombre del Superior del Administrativo: ");
 			nombreSuperior = entrada.next();
+			
+			System.out.println("\nLos datos del Administrativo son: \n");
+			System.out.println(datosUsuarios);
+			System.out.println("Funcion: " + funcion + "\nNombre del Superior:  " + nombreSuperior);
+
 			
 			break;
 		}
@@ -75,26 +91,25 @@ public class Grupal8 {
 	}
 	
 	
-	public static void registrarUsuario() {
+	public static String registrarUsuario() {
 		String nombre,fechaNacimiento,run,tipo;
 		
 		Scanner entrada = new Scanner(System.in);
-		
-		
+				
 		System.out.println("Ingrese datos básicos del usuario\n");
 		
-		System.out.print("Ingrese nombre del usuario: ");
+		System.out.println("Ingrese nombre del usuario: ");
 		nombre = entrada.next();
 		nombre += entrada.nextLine();
-		System.out.println("\nnombre usuario "+nombre+" registrado");
 		
-		System.out.print("Ingrese fecha de naciemiento del usuario: ");
+		System.out.println("Ingrese fecha de naciemiento del usuario: ");
 		fechaNacimiento = entrada.next();
-		System.out.println("\nnombre usuario "+fechaNacimiento+" registrado");
 		
-		System.out.print("Ingrese run del usuario: ");
+		System.out.println("Ingrese run del usuario: ");
 		run = entrada.next();
-		System.out.println("\nrun usuario "+run+" registrado");
+		
+		
+		return "Nombre: " + nombre + "\nFecha de Nacimiento:  " + fechaNacimiento + "\nRun: " + run ;
 	}
 	
 	
