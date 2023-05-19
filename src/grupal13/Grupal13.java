@@ -22,7 +22,7 @@ public class Grupal13 {
 		
 		
 		// Instancias de la clase Capacitacion
-		Capacitacion capacitacion1 = new Capacitacion(1234, 12345678, LocalDate.now(), LocalTime.of(9, 0), "Sala de reuniones", 30, 10);
+		Capacitacion capacitacion1 = new Capacitacion(1234, 12345678, LocalDate.of(2022,06,30), LocalTime.of(9, 0), "Sala de reuniones", 30, 10);
 		Capacitacion capacitacion2 = new Capacitacion(5678, 87654321, LocalDate.now(), LocalTime.of(14, 0), "Auditorio", 60, 20);
 
 		System.out.println(capacitacion1.toString());

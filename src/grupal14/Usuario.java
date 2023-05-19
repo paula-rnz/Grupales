@@ -8,6 +8,10 @@ public class Usuario {
 	private String nombre;
     private LocalDate fechaNacimiento;
     private int run;
+    
+    public Usuario() {
+    	
+    }
 
     public Usuario(String nombre, LocalDate fechaNacimiento, int run) {
         this.nombre = nombre;

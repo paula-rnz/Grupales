@@ -11,6 +11,10 @@ public class Capacitacion {
     private String lugar;
     private int duracion;
     private int cantidadAsistentes;
+    
+    public Capacitacion() {
+    	
+    }
 
     public Capacitacion(int identificador, int rutCliente, LocalDate dia, LocalTime hora, String lugar, int duracion, int cantidadAsistentes) {
         this.identificador = identificador;
